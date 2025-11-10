@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="gamestart.css" />
+    <title>Pingvin Money</title>
+  </head>
+  <body>
+    <div class="controls">
+      <a class="btn btn-img" id="gamenattBtn" href="gamenatt.html">
+        <img src="bilder/klokke2.png" alt="Gå til gamenatt" />
+      </a>
+
+      <h1>$<span class="gem-cost">0</span></h1>
+
+      <button type="button" class="btn btn-img" id="btn1">
+        <img src="bilder/pingvin.png" alt="Start spillet — Pingvin" />
+      </button>
+
+      <a class="btn btn-img" id="pause1" href="pauseeee.html">
+        <img src="bilder/play knapp.png" alt="Pause / fortsett" />
+      </a>
+
+      <a class="btn btn-img" id="shopicon" href="shopbisnes.html">
+        <img src="bilder/shopicon.png" alt="shop icon" />
+      </a>
+
+      <button id="buyAutoBtn" class="btn" type="button">
+        Buy autoclicker (<span id="autoCount">0</span>) — cost
+        <span id="autoCost">50</span>
+      </button>
+
+      <button id="doubleBtn" class="btn" type="button">
+        Upgrade Double (cost 100) — level: <span id="doubleLevel">x1</span>
+      </button>
+    </div>
+
+    <img
+      id="bonusImage"
+      src="bilder/gamedag2.png"
+      alt="Huset ditt"
+      style="display: none"
+    />
+
+    <script src="index.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("show") === "bilde") {
+        const bonusImg = document.getElementById("bonusImage");
+        if (bonusImg) bonusImg.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

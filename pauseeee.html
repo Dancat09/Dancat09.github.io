@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pauseeee.css" />
+    <title>pause</title>
+  </head>
+  <body>
+    <div>
+      <a href="Gamestart.html" class="btn play">Resume</a>
+      <a href="index.html" class="btn exit" id="exitBtn">Exit</a>
+
+      <script>
+        document
+          .getElementById("exitBtn")
+          .addEventListener("click", function () {
+            localStorage.setItem("autoCount", "0");
+            localStorage.setItem("clickMultiplier", "1");
+            localStorage.setItem("balance", "0");
+          });
+      </script>
+    </div>
+  </body>
+</html>

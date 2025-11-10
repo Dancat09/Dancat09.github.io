@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('bilder/pausebackgraund.png');
+    background-size: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+}
+
+.play {
+  position: absolute;
+  left: 52%;               
+  top: 25%;               
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  padding: 18px 40px;      /* gjør knappen større: vertikal og horisontal padding */
+  font-size: 150px;         
+  font-weight: 600;
+  background: #007acc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .play {
+    padding: 14px 28px;
+    font-size: 16px;
+    top: 68%;
+  }
+}
+
+.exit {
+  position: absolute;
+  left: 52%;               
+  top: 65%;               
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  padding: 18px 40px;      /* gjør knappen større: vertikal og horisontal padding */
+  font-size: 150px;         
+  font-weight: 600;
+  background: #ff0004;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .exit {
+    padding: 14px 28px;
+    font-size: 16px;
+    top: 68%;
+  }
+}

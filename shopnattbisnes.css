@@ -1,0 +1,62 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('bilder/shop\ natt\ bisnes.png');
+    background-size: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+}
+
+:root{
+  --shop-top: 265px;         
+  --shop-left: 265px;       
+  --shop-width: 260px;  
+  --shop-padding: 14px 32px; 
+  --shop-font-size: 20px;  
+  --shop-radius: 10px;    
+}
+
+body > a.play {
+  position: fixed;                   
+  top: var(--shop-top);
+  left: var(--shop-left);
+  transform: translate(-50%, -50%);   
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--shop-width);
+  padding: var(--shop-padding);
+  font-size: var(--shop-font-size);
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: #02fa27;
+  border-radius: var(--shop-radius);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease, fill .12s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body > a.play:hover { transform: translate(-50%, -54%); box-shadow: 0 10px 26px rgba(0,0,0,0.28); }
+body > a.play:active { transform: translate(-50%, -50%); }
+body > a.play:focus  { outline: 3px solid rgba(0,122,204,0.25); outline-offset: 4px; }
+
+@media (max-width: 480px) {
+  :root{
+    --shop-top: 55%;
+    --shop-left: 50%;
+    --shop-width: 80vw;
+    --shop-padding: 12px 20px;
+    --shop-font-size: 16px;
+  }
+}

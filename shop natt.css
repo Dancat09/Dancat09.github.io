@@ -1,0 +1,147 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('bilder/shop\ natt\ start.png');
+    background-size: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+}
+:root{
+  --btn1-top: 40%;      
+  --btn1-left: 30%;       
+  --btn1-width: 240px;    
+  --btn1-padding: 14px 32px;
+  --btn1-font-size: 20px;
+
+  --btn2-top: 40%;     
+  --btn2-left: 70%;     
+  --btn2-width: 240px;    
+  --btn2-padding: 14px 32px;
+  --btn2-font-size: 20px;
+}
+
+body > a.play {
+  position: fixed;                  
+  transform: translate(-50%, -50%); 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: transform .12s ease, box-shadow .12s ease, fill .12s ease;
+  background: #1596eb;
+  padding: 14px 32px;
+  font-weight: 600;
+}
+
+body > a.play:nth-of-type(1) {
+  top: var(--btn1-top);
+  left: var(--btn1-left);
+  width: var(--btn1-width);
+  padding: var(--btn1-padding);
+  font-size: var(--btn1-font-size);
+}
+
+body > a.play:nth-of-type(2) {
+  top: var(--btn2-top);
+  left: var(--btn2-left);
+  width: var(--btn2-width);
+  padding: var(--btn2-padding);
+  font-size: var(--btn2-font-size);
+  background: #1596eb; 
+}
+
+body > a.play:hover { transform: translate(-50%, -54%); box-shadow: 0 10px 26px rgba(0,0,0,0.3); }
+body > a.play:active { transform: translate(-50%, -50%); }
+body > a.play:focus  { outline: 3px solid rgba(0,122,204,0.25); outline-offset: 4px; }
+
+@media (max-width: 480px){
+  :root{
+    --btn1-width: 70vw;
+    --btn2-width: 70vw;
+    --btn1-font-size: 16px;
+    --btn2-font-size: 16px;
+    --btn1-top: 50%;
+    --btn2-top: 62%;
+    --btn1-left: 50%;
+    --btn2-left: 50%;
+  }
+}
+
+:root{
+  --btn1-top: 700px;        
+  --btn1-left: 30%;     
+  --btn1-width: 240px;   
+  --btn1-padding: 14px 32px;
+  --btn1-font-size: 20px;
+
+  --btn2-top: 700px;       
+  --btn2-left: 70%;       
+  --btn2-width: 240px;    
+  --btn2-padding: 14px 32px;
+  --btn2-font-size: 20px;
+}
+
+body > a.play {
+  position: fixed;                
+  transform: translate(-50%, -50%); 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: transform .12s ease, box-shadow .12s ease, fill .12s ease;
+  background: #09609a;
+  padding: 14px 32px;
+  font-weight: 600;
+}
+
+body > a.play:nth-of-type(1) {
+  top: var(--btn1-top);
+  left: var(--btn1-left);
+  width: var(--btn1-width);
+  padding: var(--btn1-padding);
+  font-size: var(--btn1-font-size);
+}
+
+body > a.play:nth-of-type(2) {
+  top: var(--btn2-top);
+  left: var(--btn2-left);
+  width: var(--btn2-width);
+  padding: var(--btn2-padding);
+  font-size: var(--btn2-font-size);
+  background: #09609a; 
+}
+
+
+body > a.play:hover { transform: translate(-50%, -54%); box-shadow: 0 10px 26px rgba(0,0,0,0.3); }
+body > a.play:active { transform: translate(-50%, -50%); }
+body > a.play:focus  { outline: 3px solid rgba(0,122,204,0.25); outline-offset: 4px; }
+
+@media (max-width: 480px){
+  :root{
+    --btn1-width: 70vw;
+    --btn2-width: 70vw;
+    --btn1-font-size: 16px;
+    --btn2-font-size: 16px;
+    --btn1-top: 50%;
+    --btn2-top: 62%;
+    --btn1-left: 50%;
+    --btn2-left: 50%;
+  }
+}

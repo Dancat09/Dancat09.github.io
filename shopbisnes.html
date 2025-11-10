@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shopbisnes.css" />
+    <title>Shopbisnes</title>
+  </head>
+  <body>
+    <a href="#" class="play" id="buyHouseBtn">Buy House</a>
+
+    <script>
+      const buyHouseBtn = document.getElementById("buyHouseBtn");
+
+      function updateButton() {
+        let balance = parseFloat(localStorage.getItem("balance")) || 0;
+
+        if (balance >= 500) {
+          buyHouseBtn.style.pointerEvents = "auto";
+          buyHouseBtn.style.opacity = 1;
+          buyHouseBtn.title = "Kjøp huset!";
+        } else {
+          buyHouseBtn.style.pointerEvents = "none";
+          buyHouseBtn.style.opacity = 0.5;
+          buyHouseBtn.title = "Du trenger minst $500 for å kjøpe";
+        }
+      }
+
+      updateButton();
+
+      buyHouseBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let balance = parseFloat(localStorage.getItem("balance")) || 0;
+
+        if (balance >= 500) {
+          balance -= 500;
+          localStorage.setItem("balance", balance);
+
+          window.location.href = "Gamestart.html?show=bilde";
+        } else {
+          alert("Ikke nok gems 💎");
+        }
+      });
+
+      setInterval(updateButton, 1000);
+    </script>
+  </body>
+</html>

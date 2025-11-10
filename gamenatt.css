@@ -1,0 +1,192 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('bilder/pingvin\ spill\ natt.png');
+    background-size: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+}
+
+:root{
+  --pause-top: 30px;     
+  --pause-right: 307px;   
+  --pause-size: 64px;     
+}
+
+#pause1{
+  position: fixed;                 
+  top: var(--pause-top);
+  right: var(--pause-right);
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease, fill .12s ease;
+}
+
+#pause1 img{
+  width: var(--pause-size);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  pointer-events: none; 
+  user-select: none;
+}
+
+#pause1:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,0.35); background: rgba(0,0,0,0.55); }
+#pause1:active { transform: translateY(0); }
+#pause1:focus  { outline: 3px solid rgba(0,122,204,0.25); outline-offset: 4px; }
+
+@media (max-width: 480px){
+  :root{
+    --pause-top: 12px;
+    --pause-right: 12px;
+    --pause-size: 44; 
+    } 
+} 
+
+:root{
+  --klokke-size: 120px;  
+  --klokke-top: 50%;     
+  --klokke-left: 75%;   
+}
+
+
+#GamestartBtn{
+  position: fixed;                   
+  top: var(--klokke-top);
+  left: var(--klokke-left);
+  transform: translate(-50%, -50%); 
+  z-index: 999;
+  padding: 6px;
+  background: rgba(0,0,0,0.06);
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#GamestartBtn img{
+  width: var(--klokke-size);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  pointer-events: none; 
+}
+
+#GamestartBtn:hover{
+  transform: translate(-50%, -56%) scale(1.02);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 480px){
+  :root{
+    --klokke-size: 80px;
+    --klokke-top: 60%;
+    --klokke-left: 70%;
+  }
+}
+
+:root{
+  --klokke-size: 120px;   
+  --klokke-top: 80px;      
+  --klokke-left: 1000px;     
+}
+
+#GamestartBtn{
+  position: fixed;                   
+  top: var(--klokke-top);
+  left: var(--klokke-left);
+  transform: translate(-50%, -50%);  
+  z-index: 999;
+  padding: 6px;
+  background: rgba(0,0,0,0.06);
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#GamestartBtn img{
+  width: var(--klokke-size);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  pointer-events: none; 
+}
+
+#GamestartBtn:hover{
+  transform: translate(-50%, -56%) scale(1.02);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 480px){
+  :root{
+    --klokke-size: 80px;
+    --klokke-top: 60%;
+    --klokke-left: 70%;
+  }
+}
+:root {
+  --shopicon-top: 70px;     
+  --shopicon-left: 385px;   
+  --shopicon-size: 80px;     
+}
+
+#shopicon {
+  position: fixed;
+  top: var(--shopicon-top);
+  left: var(--shopicon-left);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+#shopicon img {
+  width: var(--shopicon-size);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+#shopicon:hover {
+  transform: translate(-50%, -56%);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.32);
+}
+
+#shopicon:active {
+  transform: translate(-50%, -50%);
+}
+
+#shopicon:focus {
+  outline: 3px solid rgba(0,122,204,0.25);
+  outline-offset: 4px;
+}

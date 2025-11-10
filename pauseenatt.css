@@ -1,0 +1,162 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('bilder/pausenattbackgraund.png');
+    background-size: 1400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+}
+
+:root{
+
+  --buttons-top: 50%;     
+  --buttons-left: 50%;    
+  --btn-gap: 16px;         
+  --btn-padding: 14px 36px; 
+  --btn-font-size: 20px;   
+  --btn-radius: 10px;
+}
+
+body > div {
+  position: fixed;
+  top: var(--buttons-top);
+  left: var(--buttons-left);
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; 
+  gap: var(--btn-gap);
+  align-items: center;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+body > div .btn {
+  display: inline-block;
+  padding: var(--btn-padding);
+  font-size: var(--btn-font-size);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--btn-radius);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+  transition: transform .12s ease, fill .12s ease, box-shadow .12s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body > div .play {
+  background: #1596eb;
+}
+
+
+body > div .exit {
+  background: #e74c3c;
+}
+
+body > div .btn:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.32); }
+body > div .btn:active { transform: translateY(0); }
+body > div .btn:focus { outline: 3px solid rgba(0,122,204,0.25); outline-offset: 4px; }
+
+@media (max-width: 480px) {
+  :root{
+    --buttons-top: 58%;
+    --btn-font-size: 16px;
+    --btn-padding: 10px 24px;
+    --btn-gap: 12px;
+  }
+}
+
+:root{
+
+  --buttons-top: 50%;    
+  --buttons-left: 50%;   
+  --btn-gap: 16px;        
+  --btn-padding: 14px 36px; 
+  --btn-font-size: 20px;   
+  --btn-radius: 10px;
+}
+
+body > div {
+  position: fixed;
+  top: var(--buttons-top);
+  left: var(--buttons-left);
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; 
+  gap: var(--btn-gap);
+  align-items: center;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+body > div .btn {
+  display: inline-block;
+  padding: var(--btn-padding);
+  font-size: var(--btn-font-size);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--btn-radius);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+  transition: transform .12s ease, fill .12s ease, box-shadow .12s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body > div .play {
+  background: #1596eb;
+}
+
+body > div .exit {
+  background: #e74c3c;
+}
+
+body > div .btn:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.32); }
+body > div .btn:active { transform: translateY(0); }
+body > div .btn:focus { outline: 3px solid rgba(0,122,204,0.25); outline-offset: 4px; }
+
+@media (max-width: 480px) {
+  :root{
+    --buttons-top: 58%;
+    --btn-font-size: 16px;
+    --btn-padding: 10px 24px;
+    --btn-gap: 12px; 
+    }
+} 
+
+body > div .play {
+  padding: 12px 20px;  
+  font-size: 100px;       
+  font-weight: 800;      
+  min-width: 600px;      
+  text-align: center;
+  height: auto;
+  line-height: 1;        
+  border: 3px solid rgba(0,0,0,0.12);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+body > div .exit {
+  padding: 12px 20px;     
+  font-size: 100px;     
+  font-weight: 800;      
+  min-width: 600px;      
+  text-align: center;
+  height: auto;
+  line-height: 1;        
+  border: 3px solid rgba(0,0,0,0.12);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
